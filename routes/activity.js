@@ -54,7 +54,7 @@ function logData(req) {
 exports.edit = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
     console.log('>>>>>>>>>>>> EDIT <<<<<<<<<<<');
-    console.log(req));
+    console.log(req);
     logData(req);
     res.status(200).send('Edit');
    // res.send(200, 'Edit');
