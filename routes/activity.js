@@ -12,13 +12,13 @@ exports.logExecuteData = [];
 function logData(req) {
     exports.logExecuteData.push({
         body: req.body,
-        headers: req.headers,
-        trailers: req.trailers,
+        headers: JSON.stringify(req.headers),
+        trailers: JSON.stringify(req.trailers),
         method: req.method,
         url: req.url,
         params: req.params,
         query: req.query,
-        route: req.route,
+        route: JSON.stringify(req.route),
         cookies: req.cookies,
         ip: req.ip,
         path: req.path,
@@ -55,7 +55,8 @@ exports.edit = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
     //console.log( req.body );
     logData(req);
-    res.send(200, 'Edit');
+    res.status(200).send('Edit');
+   // res.send(200, 'Edit');
 };
 
 /*
@@ -65,7 +66,8 @@ exports.save = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
     //console.log( req.body );
     logData(req);
-    res.send(200, 'Save');
+    //res.send(200, 'Save');
+         res.status(200).send('Save');
 };
 
 /*
