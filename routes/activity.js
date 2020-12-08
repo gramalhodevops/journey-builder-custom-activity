@@ -54,7 +54,7 @@ function logData(req) {
 exports.edit = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
     console.log('>>>>>>>>>>>> EDIT <<<<<<<<<<<');
-    console.log( JSON.stringify(req));
+    console.log(req));
     logData(req);
     res.status(200).send('Edit');
    // res.send(200, 'Edit');
@@ -67,7 +67,7 @@ exports.save = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
     
     console.log('>>>>>>>>>>>> SAVE <<<<<<<<<<<');
-    console.log( JSON.stringify(req));
+    console.log(req);
     logData(req);
     //res.send(200, 'Save');
          res.status(200).send('Save');
@@ -79,7 +79,7 @@ exports.save = function (req, res) {
 exports.execute = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
     console.log('>>>>>>>>>>>> EXECUTE <<<<<<<<<<<');
-    console.log( JSON.stringify(req));
+    console.log(req);
     logData(req);
     //res.send(200, 'Execute');
     res.status(200).send('Execute');
@@ -92,7 +92,7 @@ exports.publish = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
     //console.log( req.body );
     console.log('>>>>>>>>>>>> PUBLISH <<<<<<<<<<<');
-    console.log( JSON.stringify(req));
+    console.log(req);
     logData(req);
     res.send(200, 'Publish');
 };
@@ -104,7 +104,7 @@ exports.validate = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
     //console.log( req.body );
     console.log('>>>>>>>>>>>> VALIDARE <<<<<<<<<<<');
-    console.log( JSON.stringify(req));
+    console.log(req);
     logData(req);
     res.send(200, 'Validate');
 };
